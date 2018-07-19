@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>俄罗斯方块</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="square" id="local">
+			<div class="col-xs-3 col-xs-offset-4"><div class="game" id="game"></div></div>
+			<div class="col-xs-3">
+				<div class="next" id="next"></div>
+				<div class="info">
+					<div>用时：<span id="time">0</span>s</div>
+					<div>得分：<span id="score">0</span>分</div>
+					<div id="result">0</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-3">
+						<button id="btn1" type="button" class="btn btn-danger btn-lg btn1">开始</button>
+					</div>
+					<div class="col-xs-3">
+						<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" id="btn2">暂停</button>
+					</div>
+				</div>
+				<div class="explain">请用方向键和空格键进行操作：<br>上->旋转，下->下降，左->左移，右->右移，空格->坠落</div>
+
+			</div>
+			<div class="gameover">
+				<div class="content">
+					<h1>游戏结束!</h1>
+					<h2>本次总得分:</h2>
+					<h2 class="allscore">100</h2>
+				</div>
+				<button type="button" class="btn btn-warning btn-lg">重新开始</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+	<video class="score" src="img/score.mp3"></video>
+	<video class="background" src="img/background.mp3" loop></video>
+	<video class="over" src="img/over.mp3"></video>
+	<video class="down" src="img/down.mp3"></video>
+	<video class="hover" src="img/hover.wav"></video>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/square.js"></script>
+	<script src="js/squareFactory.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/local.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/remote.js"></script>
+	
+</body>
+</html>
